@@ -9,6 +9,6 @@ import Drawer from "./routes/Drawer";
 
 export default class Routes extends Component {
   render() {
-    return <Drawer />;
+    return <BasicRoutes />;
   }
 }
