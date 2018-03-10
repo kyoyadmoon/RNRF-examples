@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Router, Stack, Scene, Tabs, Drawer } from "react-native-router-flux";
 import TabIcon from "../components/TabIcon";
-import Home from "../screens/Home";
+import TabHome from "../screens/TabHome";
 import About from "../screens/About";
 import DrawerContent from "../components/drawer/DrawerContent";
 import Icon from "react-native-vector-icons/SimpleLineIcons";
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
   },
   tabBarSelectedItemStyle: {
     backgroundColor: "#ddd"
+  },
+  titleStyle: {
+    color: "white"
   }
 });
 
@@ -33,42 +36,36 @@ export default class Routes extends Component {
             hideNavBar
             key="drawer"
             contentComponent={DrawerContent}
-            // drawerImage={MenuIcon}
             drawerIcon={DrawerIcon}
             drawerWidth={300}
           >
             <Stack
               key="tab1"
-              tabBarLabel="TAB #1"
-              inactiveBackgroundColor="#FFF"
-              activeBackgroundColor="#DDD"
-              icon={TabIcon}
-              // navigationBarStyle={{  }}
-              titleStyle={{ color: "white", alignSelf: "center" }}
+              titleStyle={styles.titleStyle}
+              title="Tab #1"
+              keyPrefix="tab1"
             >
-              <Scene key="tab1_home" component={Home} title="Tab1 Home"/>
-              <Scene key="about" component={About} title="Tab1 About" test={'testing'}/>
+              <Scene key="tab1_home" component={TabHome} />
+              <Scene key="tab1_about" component={About} title="tab1_about" />
             </Stack>
             <Stack
               key="tab2"
-              tabBarLabel="TAB #1"
-              inactiveBackgroundColor="#FFF"
-              activeBackgroundColor="#DDD"
-              icon={TabIcon}
-              titleStyle={{ color: "white", alignSelf: "center" }}
+              titleStyle={styles.titleStyle}
+              title="Tab #2"
+              keyPrefix="tab2"
             >
-              <Scene key="tab2_home" component={Home} title="Tab2 Home"/>
+              <Scene key="tab2_home" component={TabHome} />
+              <Scene key="tab2_about" component={About} title="tab2_about" />
             </Stack>
             <Stack
               key="tab3"
-              tabBarLabel="TAB #1"
-              inactiveBackgroundColor="#FFF"
-              activeBackgroundColor="#DDD"
-              icon={TabIcon}
+              title="Tab #3"
+              keyPrefix="tab3"
               navigationBarStyle={{ backgroundColor: "pink" }}
-              titleStyle={{ color: "white", alignSelf: "center" }}
+              titleStyle={styles.titleStyle}
             >
-              <Scene key="tab3_home" component={Home} title="Tab3 Home"/>
+              <Scene key="tab3_home" component={TabHome} />
+              <Scene key="tab3_about" component={About} title="tab3_about" />
             </Stack>
           </Drawer>
         </Stack>
