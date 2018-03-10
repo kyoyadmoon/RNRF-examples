@@ -29,19 +29,17 @@ export default class Routes extends Component {
             hideNavBar
             key="tabbar"
             swipeEnabled
-            showLabel={false}
+            showLabel={true}
             tabBarStyle={styles.tabBarStyle}
             activeBackgroundColor="rgba(0,100,250,.2)"
-            inactiveBackgroundColor="white"
+            inactiveBackgroundColor="#DDD"
           >
             <Stack
               key="tab1"
               title="Tab #1"
               tabBarLabel="TAB #1"
-              inactiveBackgroundColor="#FFF"
-              activeBackgroundColor="#DDD"
               icon={TabIcon}
-              titleStyle={{ color: "white", alignSelf: "center" }}
+              titleStyle={{ color: "white" }}
               keyPrefix="tab1"
             >
               <Scene key="tab1_home" component={TabsHome} />
@@ -51,10 +49,8 @@ export default class Routes extends Component {
               key="tab2"
               title="Tab #2"
               tabBarLabel="TAB #1"
-              inactiveBackgroundColor="#FFF"
-              activeBackgroundColor="#DDD"
               icon={TabIcon}
-              titleStyle={{ color: "white", alignSelf: "center" }}
+              titleStyle={{ color: "white" }}
               keyPrefix="tab2"
             >
               <Scene key="tab2_home" component={TabsHome} />
@@ -64,10 +60,8 @@ export default class Routes extends Component {
               key="tab3"
               title="Tab #3"
               tabBarLabel="TAB #1"
-              inactiveBackgroundColor="#FFF"
-              activeBackgroundColor="#DDD"
               icon={TabIcon}
-              titleStyle={{ color: "white", alignSelf: "center" }}
+              titleStyle={{ color: "white" }}
               keyPrefix="tab3"
             >
               <Scene key="tab3_home" component={TabsHome} />
