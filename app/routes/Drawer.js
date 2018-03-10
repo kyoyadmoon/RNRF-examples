@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { Router, Stack, Scene, Tabs, Drawer } from "react-native-router-flux";
+import { Router, Stack, Scene, Drawer } from "react-native-router-flux";
 import TabIcon from "../components/TabIcon";
 import TabHome from "../screens/TabHome";
 import About from "../screens/About";
