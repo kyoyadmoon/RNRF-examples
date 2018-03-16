@@ -22,11 +22,18 @@ var styles = StyleSheet.create({
 });
 
 export default class Home extends React.Component {
+  /** For Drawer Sample
+  componentDidMount() {
+    Actions.drawerOpen();
+  }
+  */
+
   onPress = () => {
     Actions[this.props.keyPrefix + "_about"]({
       user: "dmoon"
     });
   };
+
   render() {
     return (
       <View style={styles.container}>
