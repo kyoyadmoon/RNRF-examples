@@ -36,6 +36,7 @@ export default class Routes extends Component {
             tabBarStyle={styles.tabBarStyle}
             activeBackgroundColor="rgba(0,100,250,.2)"
             inactiveBackgroundColor="#DDD"
+            tabBarPosition="bottom" // default 'bottom' on ios, 'top' on android
           >
             <Stack
               key="tab1"
