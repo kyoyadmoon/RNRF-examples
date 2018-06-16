@@ -4,7 +4,7 @@ import { Text } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 const propTypes = {
-  selected: PropTypes.bool,
+  focused: PropTypes.bool,
   title: PropTypes.string
 };
 
